@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: url(img/casa\ 1.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  width: 300px;
+  margin: 200px auto;
+  text-align: center;
+}
+
+form input {
+  display: block;
+  margin: 10px auto;
+  width: 250px;
+  height: 30px;
+}
+
+#loginButton {
+  width: 250px;
+  height: 30px;
+  margin-bottom: 10px;
+}

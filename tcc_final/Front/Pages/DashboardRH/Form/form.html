@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="form.css" />
+    <title>Formulário de Cadastro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div>
+      <h1 class="cadastro">Cadastro de funcionários</h1>
+      <p class="group"><strong>Complete as informações:</strong></p>
+    </div>
+    <form id="meu-formulario">
+      <div class="form-group">
+        <label for="firstName">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="firstName"
+          placeholder="Entre com seu nome"
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastName">Sobrenome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastName"
+          placeholder="Entre com seu sobrenome"
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Senha</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          placeholder="Entre com sua senha"
+        />
+      </div>
+      <div class="form-group">
+        <label for="enrollDate">Data de contratação</label>
+        <input type="date" class="form-control" id="enrollDate" />
+      </div>
+      <div class="form-group">
+        <label for="birthDate">Data de aniversário</label>
+        <input type="date" class="form-control" id="birthDate" />
+      </div>
+      <div
+        class="form-group form-check d-flex flex-row align-items-center gap-2"
+      >
+        <input type="checkbox" class="form-check-input" id="isRh" />
+        <label class="form-check-label pt-1" for="isRh">RH</label>
+      </div>
+      <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input
+          type="text"
+          class="form-control"
+          id="cpf"
+          placeholder="Entre com CPF"
+        />
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefone</label>
+        <input
+          type="text"
+          class="form-control"
+          id="phone"
+          placeholder="Entre com seu numero de telefone"
+        />
+      </div>
+      <div class="form-group">
+        <label for="state">Estado</label>
+        <select
+          class="form-select"
+          name="estados"
+          id="estados"
+          aria-label="Default select example"
+        >
+          <option value="" selected disabled>Selecione um estado</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AP">Amapá</option>
+          <option value="AM">Amazonas</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="DF">Distrito Federal</option>
+          <option value="ES">Espírito Santo</option>
+          <option value="GO">Goiás</option>
+          <option value="MA">Maranhão</option>
+          <option value="MT">Mato Grosso</option>
+          <option value="MS">Mato Grosso do Sul</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="PA">Pará</option>
+          <option value="PB">Paraíba</option>
+          <option value="PR">Paraná</option>
+          <option value="PE">Pernambuco</option>
+          <option value="PI">Piauí</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="RN">Rio Grande do Norte</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="RO">Rondônia</option>
+          <option value="RR">Roraima</option>
+          <option value="SC">Santa Catarina</option>
+          <option value="SP">São Paulo</option>
+          <option value="SE">Sergipe</option>
+          <option value="TO">Tocantins</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="city">Cidade</label>
+        <select
+          class="form-select"
+          name="cidades"
+          id="cidades"
+          aria-label="Default select example"
+        ></select>
+      </div>
+      <div class="mt-2">
+        <button type="submit" id="sendForm" class="btn btn-dark">
+          Confirmar
+        </button>
+        <button type="click" id="backBtn" class="btn btn-dark">
+          Voltar
+        </button>
+      </div>
+    </form>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

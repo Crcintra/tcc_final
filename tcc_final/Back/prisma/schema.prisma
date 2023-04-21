@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./db.sqlite3"
+}
+
+model User {
+  id         Int        @id @default(autoincrement())
+  firstName  String
+  lastName   String
+  password   String
+  enrollDate DateTime
+  birthDate  DateTime
+  isRh       Boolean    @default(false)
+  cpf        String
+  phone      String
+  state      String
+  city       String
+  holerite   Holerite[]
+}
+
+model Holerite {
+  id           Int    @id @default(autoincrement())
+  currentMonth String
+  bruteSalary  Float
+  inssValue    Float
+  foodValue    Float
+  healthyValue Float
+  user         User   @relation(fields: [userId], references: [id])
+  userId       Int
+}
